@@ -7,6 +7,7 @@ import WordDisplay from "./WordDisplay";
 import styled from "styled-components";
 import Modal from "./Modal";
 
+//* Calls on bank of words
 function getWord() {
 	return mysteryWord[Math.floor(Math.random() * mysteryWord.length)];
 }
@@ -24,6 +25,7 @@ function App() {
 		.every((letter) => guessedLetters.includes(letter));
 	const userLost = incorrectAnswers.length >= 6;
 
+	//* Keeps track of users guesses
 	const addGuessedLetter = useCallback(
 		(letter: string) => {
 			if (guessedLetters.includes(letter) || userWon || userLost) return;
@@ -33,6 +35,7 @@ function App() {
 		[guessedLetters, userWon, userLost]
 	);
 
+	//* Keeping track of users keyboard actions
 	useEffect(() => {
 		const handler = (e: KeyboardEvent) => {
 			const key = e.key;
@@ -47,6 +50,7 @@ function App() {
 		};
 	}, [guessedLetters]);
 
+	//* Tracks when user presses 'Enter'
 	useEffect(() => {
 		const handler = (e: KeyboardEvent) => {
 			const key = e.key;
@@ -62,6 +66,7 @@ function App() {
 		};
 	});
 
+	//* Styled component for the win/lose message
 	const WinLose = styled.h1`
 		font-family: "Shantell Sans", cursive;
 		font-size: "2rem";
