@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Container } from "./container";
-import Drawing from "./Drawing";
 import { mysteryWord } from "./Words";
+import Drawing from "./Drawing";
 import Keyboard, { KeyboardParent } from "./Keyboard";
 import WordDisplay from "./WordDisplay";
 import styled from "styled-components";

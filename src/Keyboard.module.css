@@ -1,12 +1,14 @@
+/** Background Image **/
 body {
-	background-image: url(test1.png);
+	background-image: url(background.png);
 	background-size: cover;
 }
 
+/** Keyboard Buttons **/
 .btn {
 	width: 100%;
 	border: 3px solid black;
-	background: #FFFFFF;
+	background: #ffffff;
 	aspect-ratio: 1 / 1;
 	font-size: 2.5rem;
 	text-transform: uppercase;
@@ -31,6 +33,11 @@ body {
 	background-color: red;
 	color: white;
 	opacity: 0.4;
+}
+
+.enterMsg {
+	background: #ffffff;
+	text-align: center;
 }
 
 @media (max-height: 780px) {
